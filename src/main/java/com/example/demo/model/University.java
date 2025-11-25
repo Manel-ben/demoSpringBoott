@@ -1,5 +1,6 @@
 package com.example.demo.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import jakarta.persistence.CascadeType;
@@ -18,8 +19,7 @@ public class University {
     private String name;
 
     @OneToMany(mappedBy = "university", cascade = CascadeType.ALL) 
-    private List<Student> students;
-
+    private List<Student> students = new ArrayList<>();
     
     public University() {}
 
